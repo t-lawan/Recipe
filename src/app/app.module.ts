@@ -13,6 +13,10 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {AppRoutingModule} from "./app-routing.module";
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,7 @@ import {ShoppingListService} from "./shopping-list/shopping-list.service";
     DropdownDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule,HttpModule,AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
